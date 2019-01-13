@@ -1,7 +1,5 @@
 package tester;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Logger;
 
 public class test 
@@ -9,15 +7,19 @@ public class test
 	private static Logger logger = Logger.getLogger("Test");
 	public static void main(String[] args)
 	{
-		List<Object> objects = new ArrayList<>();
-		
-		Object object = new String("12.3");
-		
-		logger.info(object.getClass().getTypeName());
-		
-		object = new Double("1234");
-		
-		logger.info(object.getClass().getTypeName());
+		String[][] data= {{"ABC","1","1","+22.34"},
+				{"CDE","2","1","-212.34"},
+				{"FGH","3","0","-0.34"}
+		};
+
+		for(int i=0;i<data.length;i++)
+		{
+			for(int j=0;j<data[i].length;j++)
+			{
+				
+			}
+			
+		}
 		
 	}
 }
