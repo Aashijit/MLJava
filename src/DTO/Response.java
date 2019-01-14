@@ -7,9 +7,19 @@ public class Response
 		this.returnCode = returnCode;
 		this.returnMessage = returnMessage;
 	}
+	
+
+	public Response(String returnCode, String returnMessage, String detailedMessage) {
+		this.returnCode = returnCode;
+		this.returnMessage = returnMessage;
+		this.detailedMessage = detailedMessage;
+	}
+
 
 	private String returnCode;
 	private String returnMessage;
+	private String detailedMessage;
+	
 	public String getReturnCode() {
 		return returnCode;
 	}
@@ -22,10 +32,15 @@ public class Response
 	public void setReturnMessage(String returnMessage) {
 		this.returnMessage = returnMessage;
 	}
-	
+	public String getDetailedMessage() {
+		return detailedMessage;
+	}
+	public void setDetailedMessage(String detailedMessage) {
+		this.detailedMessage = detailedMessage;
+	}
 	@Override
 	public String toString() {
-		return "Response [returnCode=" + returnCode + ", returnMessage=" + returnMessage + "]";
+		return "Response [returnCode=" + returnCode + ", returnMessage=" + returnMessage + ", detailedMessage="
+				+ detailedMessage + "]";
 	}
-
 }
