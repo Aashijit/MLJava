@@ -89,12 +89,18 @@ public class ReadCSV implements Codes {
 	}
 	
 	
-	
+	/**
+	 * @return {@link Output}
+	 */
 	private Output read()
 	{
-		//Step 1: Call the initCSV method and pass on the output if the response received is not 
+		//Step 1 : Call the initCSV method and pass on the output if the response received is not 
 		// RC_SUCCESS
-		Response response = initCSV();
+		Response response = initCSV(); 
+		if(!response.getReturnCode().equals(RC_SUCCES))
+			return new Output(response.getReturnCode(), response.getReturnMessage());
+		
+		//Step 2 :  Extract the Header in the Headers List of the Output Object
 		
 		
 		
